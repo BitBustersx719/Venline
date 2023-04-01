@@ -16,7 +16,6 @@
 <body>
 
     <%- include('include/navbar') %>
-
   <main>
 
 
@@ -27,7 +26,8 @@
 
 
         <div id="list">
-
+            
+            <% for(i of cart.items){ %>
             <div class="seperation-line">
 
             </div>
@@ -38,7 +38,7 @@
 
                 <div class="product-description">
 
-                  <h3 class="product-name item-heading">Example Name</h3>
+                  <h3 class="product-name item-heading"><%=i.productName%></h3>
                   <div class="product-seller">Seller: Onkit</div>
                   <div class="product-stock">In Stock</div>
                   <div class="remove"><a href="..."><i class="fa-solid fa-trash"></i></a></div>
@@ -48,12 +48,12 @@
 
               <div class="product-price">
                 <h3>Price</h3>
-                <div class="price"> 40/kg</div>
+                <div class="price"><%=i.price%></div>
               </div>
 
               <div class="product-quantity">
                 <h3> Quantity</h3>
-                <div class="quantity"> <button class="btn-arrow decre"><i class="fa-solid fa-minus minus-icon"></i></button> <span>1</span> <button class="btn-arrow incre"><i class="fa-solid fa-plus plus-icon"></i></button> </div>
+                <div class="quantity"> <button class="btn-arrow decre"><i class="fa-solid fa-minus minus-icon"></i></button> <span><%=i.quantity%></span> <button class="btn-arrow incre"><i class="fa-solid fa-plus plus-icon"></i></button> </div>
               </div>
 
               <div class="product-total">
@@ -62,85 +62,7 @@
               </div>
 
             </div>
-
-            <div class="seperation-line">
-
-            </div>
-
-
-
-            <div class="product">
-
-              <div class="product-image">
-                <img src="images/tomato2-min.png">
-
-                <div class="product-description">
-
-                  <h3 class="product-name item-heading">Example Name</h3>
-                  <div class="product-seller">Seller: Onkit</div>
-                  <div class="product-stock">In Stock</div>
-                  <div class="remove"><a href="..."><i class="fa-solid fa-trash"></i></a></div>
-
-                </div>
-              </div>
-
-              <div class="product-price">
-                <h3>Price</h3>
-                <div class="price"> 40/kg</div>
-              </div>
-
-              <div class="product-quantity">
-                <h3> Quantity</h3>
-                <div class="quantity"> <button class="btn-arrow decre"><i class="fa-solid fa-minus minus-icon"></i></button> <span>1</span> <button class="btn-arrow incre"><i class="fa-solid fa-plus plus-icon"></i></button> </div>
-              </div>
-
-              <div class="product-total">
-                <h3>Total</h3>
-                <div class="total"> <span>40</span> Rs.</div>
-              </div>
-
-            </div>
-
-            <div class="seperation-line">
-
-            </div>
-
-
-            <div class="product">
-
-              <div class="product-image">
-                <img src="images/broccoli-min.png">
-
-                <div class="product-description">
-
-                  <h3 class="product-name item-heading">Example Name</h3>
-                  <div class="product-seller">Seller: Onkit</div>
-                  <div class="product-stock">In Stock</div>
-                  <div class="remove"><a href="..."><i class="fa-solid fa-trash"></i></a></div>
-
-                </div>
-              </div>
-
-              <div class="product-price">
-                <h3>Price</h3>
-                <div class="price"> 40/kg</div>
-              </div>
-
-              <div class="product-quantity">
-                <h3> Quantity</h3>
-                <div class="quantity"> <button class="btn-arrow decre"><i class="fa-solid fa-minus minus-icon"></i></button> <span>1</span> <button class="btn-arrow incre"><i class="fa-solid fa-plus plus-icon"></i></button> </div>
-              </div>
-
-              <div class="product-total">
-                <h3>Total</h3>
-                <div class="total"> <span>40</span> Rs.</div>
-              </div>
-
-            </div>
-
-            <div class="seperation-line">
-
-            </div>
+            <% } %>     
         </div>
 
 
