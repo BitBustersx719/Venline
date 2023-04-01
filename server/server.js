@@ -7,11 +7,11 @@ const colors= require('colors')
 const userRoutes= require('./routes/userRoutes')
 const parse= require('body-parser')
 const { notfound, errorhandler } = require('./middlewares/errorHandler');
-const {authUser} = require('./controllers/Con_Controller')
+const {authUser} = require('./controllers/con_controller')
 const{ getProducts}=require('./controllers/product_controller')
-const seller= require('./routes/sellerRoute')
-const Product = require('./models/productmodel');
-const Cart = require('./models/cartmodel');
+const seller= require('./routes/sellerRoutes')
+const Product = require('./models/productModel');
+const Cart = require('./models/cartModel');
 dotenv.config()
 connectDb()
 const app = express();
@@ -37,19 +37,17 @@ app.get('/', (req, res) => {
         });
     });
 });
-// app.get('/cart', (req, res) => {
-//     Cart.findOne({username}, function(err, cart){
-//         if(err){
-//             console.log('error!');
-//             return;
-//         }
-//         res.render(path.join(__dirname, '../client', 'cart.ejs'),{
-//             cart : cart
-//         });
-//     });
-// });
+const username = 'onkit mondol'
 app.get('/cart', (req, res) => {
-    res.render(path.join(__dirname, '../client', 'cart.ejs'));
+    Cart.findOne({username}, function(err, cart){
+        if(err){
+            console.log('error!');
+            return;
+        }
+        res.render(path.join(__dirname, '../client', 'cart.ejs'),{
+            cart : cart
+        });
+    });
 });
 app.get('/profile', (req, res) => {
     res.render(path.join(__dirname, '../client', 'profile.ejs'));
@@ -63,7 +61,7 @@ app.get('/order-confirmation', (req, res) => {
 app.get('/checkout', (req, res) => {
     res.render(path.join(__dirname, '../client', 'checkout.ejs'));
 });
-app.get('/product-file', (req, res) => {
+app.get('/upload-product', (req, res) => {
     res.render(path.join(__dirname, '../client', 'product-file.ejs'));
 });
 //Register user
