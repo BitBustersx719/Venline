@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler');
-const User=require('../models/ConsumerModel')
-const Product=require('../models/productmodel')
+const User=require('../models/consumerModel')
+const Product=require('../models/productModel')
 const Order = require('../models/orderModel');
 
 // @desc      Create new order
@@ -31,13 +31,13 @@ const addOrderItems = asyncHandler(async (req, res) => {
               shippingAddress,
               totalPrice,
             });
-        
+
             const createdOrder = await order.save();
-        
+
             res.status(201).json(createdOrder);
           }
     }
- 
+
 });
 
 module.exports = {

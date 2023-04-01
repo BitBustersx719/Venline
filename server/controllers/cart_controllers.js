@@ -1,7 +1,7 @@
 const asyncHandler = require('express-async-handler');
-const User = require('../models/ConsumerModel');
-const Cart = require('../models/cartmodel');
-const Product = require('../models/productmodel');
+const User = require('../models/consumerModel');
+const Cart = require('../models/cartModel');
+const Product = require('../models/productModel');
 
 const addToCart = asyncHandler(async(req, res) => {
   const { username, productName, quantity, price } = req.body;
