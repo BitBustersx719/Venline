@@ -145,6 +145,7 @@ section{
 #header h1{
 	font-size: 2rem;
 	font-weight: 500;
+	letter-spacing: 1px;
 }
 
 #header h3{
@@ -163,13 +164,14 @@ section{
 #header-text button{
 	height: 2rem;
 	width: 8rem;
-	font-size: 1.2rem;
+	font-size: 1.15rem;
 	background-color: white;
 	box-sizing: content-box;
 	border: 1px solid black;
 	color: #696969;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
+	letter-spacing: 0.5px;
 }
 
 #header-text button:hover{
@@ -423,6 +425,7 @@ section{
 	top: 3px;
 	cursor: pointer;
 	font-size: 0.85rem;
+	letter-spacing: 1px;
 }
 
 .filter-box{
@@ -461,7 +464,6 @@ section{
 .card{
 	height: 24.5rem;
 	width: 19rem;
-/*	border-radius: 1rem;*/
 	position: relative;
 	background-color: white;
 	border: 8px white solid;
@@ -475,7 +477,6 @@ section{
 .card img{
 	height: 68%;
 	width: 100%;
-/*	border-radius: 1rem;*/
 }
 
 .card-body{
@@ -507,12 +508,15 @@ section{
 .name{
 	margin-top: 0.5rem;
 	font-size: 1.25rem;
+	letter-spacing: 1px;
 }
 
 .description{
 	font-weight: 0;
 	color: #868686;
 	margin-bottom: 1rem;
+	letter-spacing: 0.5px;
+	font-size: 0.9rem;
 }
 
 .price{
@@ -536,6 +540,7 @@ section{
 	border-radius: 0.25rem;
 	cursor: pointer;
 	font-size: 0.85rem;
+	letter-spacing: 1px;
 }
 
 /*provide section*/
@@ -553,11 +558,14 @@ section{
 	font-weight: 100;
 	margin: auto;
 	margin-bottom: 3rem;
+	letter-spacing: 0.5px;
 }
 
 #provide h3{
 	font-size: 1.25rem;
 	font-weight: 100;
+	letter-spacing: 1px;
+	line-height: 18px;
 }
 
 .provide-card{
@@ -568,7 +576,7 @@ section{
 	box-shadow: 1px 13px 20px #e4e5e6;
 	border-radius: 1rem;
 	z-index: 99;
-	color: #696969;
+	color: #6a6a6a;
 }
 
 .sm{
